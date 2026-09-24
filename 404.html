@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Kitchenforge</title>
+    <meta name="description" content="404 Page Not Found.">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+                <div class="brand-text">
+                    <span class="brand-name">KITCHENFORGE</span>
+                    <span class="brand-desc">Commercial Kitchen Systems</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="home-2.html">Home 2</a>
+                <a href="products.html">Products</a>
+                <a href="installation-service.html">Installation</a>
+                <a href="financing.html">Financing</a>
+                <a href="projects.html">Projects</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="nav-icon-btn quote-trigger desktop-only" title="Request Quote">
+                    <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                </button>
+                <button class="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE DRAWER -->
+    <div class="overlay"></div>
+    <div class="mobile-drawer">
+        <button class="drawer-close" aria-label="Close menu"><svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>
+        <div class="drawer-links">
+            <a href="index.html">Home</a>
+            <a href="home-2.html">Home 2</a>
+            <a href="products.html">Products</a>
+            <a href="installation-service.html">Installation & Service</a>
+            <a href="financing.html">Financing</a>
+            <a href="projects.html">Projects</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <button class="btn btn-primary mt-4 quote-trigger">REQUEST A QUOTE</button>
+        </div>
+        <div class="drawer-controls">
+            <button class="control-btn theme-toggle">Light / Dark</button>
+            <button class="control-btn rtl-toggle">LTR / RTL</button>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main style="min-height: calc(100vh - 80px); display: flex; align-items: center;">
+        <section class="section container text-center reveal">
+            <h1 style="font-size: clamp(4rem, 10vw, 8rem);" class="text-accent">404</h1>
+            <h2 class="mb-4">PAGE NOT FOUND</h2>
+            <p class="text-muted mb-5">The equipment or page you are looking for is currently unavailable or has been moved.</p>
+            <div class="flex gap-md justify-center">
+                <a href="index.html" class="btn btn-primary">RETURN TO HOME</a>
+                <a href="products.html" class="btn btn-secondary">EXPLORE EQUIPMENT</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- GLOBAL QUOTE MODAL (Reused) -->
+    <div class="modal" id="quote-modal">
+        <div class="modal-content">
+            <button class="modal-close"><svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>
+            <div id="quote-form-body">
+                <h2 class="h3 mb-4 text-accent">LET'S PLAN YOUR KITCHEN</h2>
+                <form id="quote-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Full Name *</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Company Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email *</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone</label>
+                            <input type="tel" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Business Type *</label>
+                            <select class="form-control" required>
+                                <option value="">Select...</option>
+                                <option>Restaurant</option>
+                                <option>Hotel</option>
+                                <option>Café</option>
+                                <option>Bakery</option>
+                                <option>Catering</option>
+                                <option>Institution</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Project Type *</label>
+                            <select class="form-control" required>
+                                <option value="">Select...</option>
+                                <option>New Kitchen</option>
+                                <option>Kitchen Renovation</option>
+                                <option>Equipment Replacement</option>
+                                <option>Installation Only</option>
+                                <option>Service Request</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Equipment Category</label>
+                            <input type="text" id="quote-eq-cat" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Equipment Name</label>
+                            <input type="text" id="quote-eq-name" class="form-control">
+                        </div>
+                        <div class="form-group" style="grid-column: 1/-1;">
+                            <label class="form-label">Message *</label>
+                            <textarea class="form-control" rows="3" required></textarea>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex gap-md">
+                        <button type="submit" class="btn btn-primary">SEND QUOTE REQUEST →</button>
+                        <button type="button" class="btn btn-secondary quote-cancel">MAYBE LATER</button>
+                    </div>
+                </form>
+            </div>
+            <div id="quote-success" class="form-success">
+                <h3 class="h2 mb-3">QUOTE REQUEST PREPARED</h3>
+                <p class="text-muted">Thanks — your project information has been prepared for the Kitchenforge team.</p>
+                <button class="btn btn-secondary mt-4 modal-close">CLOSE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="nav-brand mb-4">
+                        <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+                        <div class="brand-text">
+                            <span class="brand-name">KITCHENFORGE</span>
+                        </div>
+                    </a>
+                    <p class="text-sm">Commercial Kitchen Equipment<br>Supply / Installation / Service</p>
+                </div>
+                <div class="footer-col">
+                    <h4>EXPLORE</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="home-2.html">Home 2</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>SERVICES</h4>
+                    <ul class="footer-links">
+                        <li><a href="installation-service.html">Installation & Service</a></li>
+                        <li><a href="financing.html">Financing</a></li>
+                        <li><a href="#" class="quote-trigger">Equipment Quote</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>COMPANY</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>NEWSLETTER</h4>
+                    <p class="text-sm mb-3">KITCHEN EQUIPMENT INSIGHTS & PROJECT UPDATES</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault()">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit">SUBSCRIBE →</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Kitchenforge. All rights reserved.</p>
+                <div class="flex gap-md">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>
+    </button>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
