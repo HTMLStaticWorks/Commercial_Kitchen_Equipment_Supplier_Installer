@@ -1323,3 +1323,31 @@ select.form-control {
     align-self: flex-start;
   }
 }
+
+/* Service Area / Project Coverage Section */
+.service-area-section .service-area-media {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.service-area-section .service-area-media .editorial-image {
+  width: 100%;
+}
+
+.service-area-section .service-area-action {
+  margin-top: 24px;
+}
+
+.service-area-section .service-area-action .btn {
+  display: inline-flex;
+}
+
+@media (max-width: 767px) {
+  .service-area-section .service-area-action .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
