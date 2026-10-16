@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light" dir="ltr">
 
 <head>
@@ -44,7 +44,7 @@
                 </button>
                 <button class="btn btn-primary quote-trigger desktop-only"
                     style="padding: 8px 16px; font-size: 0.9rem;">ENQUIRY</button>
-                <button class="hamburger" aria-label="Menu">
+                <button class="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-navigation">
                     <span></span><span></span><span></span>
                 </button>
             </div>
@@ -53,7 +53,7 @@
 
     <!-- MOBILE DRAWER -->
     <div class="overlay"></div>
-    <div class="mobile-drawer">
+    <div class="mobile-drawer" id="mobile-navigation" aria-label="Mobile navigation">
         <button class="drawer-close" aria-label="Close menu"><svg viewBox="0 0 24 24">
                 <path
                     d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
@@ -136,7 +136,7 @@
         </section>
 
         <!-- 03 EQUIPMENT CATEGORIES -->
-        <section class="section" style="background-color: var(--color-surface);">
+        <section class="section equipment-categories-section" style="background-color: var(--color-surface);">
             <div class="container reveal">
                 <h2 class="mb-4">EQUIPMENT CATEGORIES</h2>
                 <div class="editorial-split">
@@ -185,6 +185,23 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+        </section>
+
+        <!-- EQUIPMENT USES: QUICK BUYER GUIDE -->
+        <section class="section equipment-guide" style="background-color: var(--color-background);">
+            <div class="container reveal">
+                <div class="section-heading-row">
+                    <div><p class="eyebrow">CHOOSE BY WORKFLOW</p><h2>THE RIGHT EQUIPMENT FOR EVERY STATION.</h2></div>
+                    <p class="text-muted">Understand what each equipment group does before specifying a kitchen line.</p>
+                </div>
+                <div class="equipment-guide-grid">
+                    <article class="equipment-guide-card"><img src="assets/images/cooking.jpg" alt="Commercial ranges and cooking equipment"><div><h3>Cooking line</h3><p>Ranges, fryers, griddles and ovens handle high-volume cooking, searing, frying and baking.</p><a href="products.html" class="text-link">Explore cooking equipment →</a></div></article>
+                    <article class="equipment-guide-card"><img src="assets/images/prep.jpg" alt="Stainless steel food preparation workstations"><div><h3>Preparation</h3><p>Worktables, sinks and mixers support ingredient washing, portioning, mixing and safe mise en place.</p><a href="products.html" class="text-link">Explore prep equipment →</a></div></article>
+                    <article class="equipment-guide-card"><img src="assets/images/hold.jpg" alt="Commercial hot holding equipment"><div><h3>Holding & service</h3><p>Warmers, holding cabinets and pass-through counters help maintain service temperature between cooking and serving.</p><a href="products.html" class="text-link">Explore holding equipment →</a></div></article>
+                    <article class="equipment-guide-card"><img src="assets/images/serve.jpg" alt="Commercial food service counter"><div><h3>Service & wash-up</h3><p>Service counters and wash-up stations help keep food moving to guests while supporting cleaning routines.</p><a href="products.html" class="text-link">Discuss your kitchen needs →</a></div></article>
+                </div>
+                <div class="service-area-panel"><div><p class="eyebrow">DELIVERY & INSTALLATION</p><h3>CHECK COVERAGE BEFORE YOU PLAN YOUR PROJECT.</h3><p>Service availability depends on the project address, equipment scope and site requirements. Share your city or postcode and our team can confirm delivery and installation coverage before quoting.</p></div><a href="contact.html" class="btn btn-primary">CONFIRM MY SERVICE AREA →</a></div>
             </div>
         </section>
 
