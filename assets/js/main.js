@@ -67,12 +67,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const openDrawer = () => {
         if(drawer) drawer.classList.add('open');
+        if(hamburger) hamburger.setAttribute('aria-expanded', 'true');
         if(overlay) overlay.classList.add('show');
         document.body.style.overflow = 'hidden';
     };
 
     const closeDrawer = () => {
         if(drawer) drawer.classList.remove('open');
+        if(hamburger) hamburger.setAttribute('aria-expanded', 'false');
         if(overlay) overlay.classList.remove('show');
         document.body.style.overflow = '';
     };
