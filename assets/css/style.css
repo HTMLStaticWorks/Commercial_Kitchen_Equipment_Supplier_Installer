@@ -1245,13 +1245,14 @@ select.form-control {
 .section-heading-row { display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-bottom: 32px; }
 .section-heading-row > * { min-width: 0; }
 .section-heading-row > p { max-width: 420px; }
-.equipment-guide-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
-.equipment-guide-card { display: grid; grid-template-columns: minmax(120px,  .9fr) minmax(0, 1.1fr); background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; min-width: 0; }
-.equipment-guide-card img { width: 100%; height: 100%; min-height: 220px; object-fit: cover; }
-.equipment-guide-card > div { padding: clamp(18px, 2.2vw, 28px); align-self: center; }
+.equipment-guide-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; align-items: stretch; }
+.equipment-guide-card { display: grid; grid-template-columns: minmax(120px,  .9fr) minmax(0, 1.1fr); background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; min-width: 0; height: 100%; }
+.equipment-guide-card img { width: 100%; height: 100%; min-height: 220px; object-fit: cover; display: block; }
+.equipment-guide-card > div { padding: clamp(18px, 2.2vw, 28px); display: flex; flex-direction: column; justify-content: flex-start; align-self: stretch; height: 100%; min-width: 0; box-sizing: border-box; }
 .equipment-guide-card h3 { font-size: clamp(1.25rem, 2vw, 1.7rem); margin-bottom: 10px; }
 .equipment-guide-card p { color: var(--color-muted); margin-bottom: 14px; }
-.text-link { color: var(--color-safety-amber); font-weight: 700; }
+.text-link { color: var(--color-safety-amber); font-weight: 700; display: inline-flex; align-items: center; gap: 6px; text-decoration: none; }
+.equipment-guide-card .text-link { margin-top: auto; align-self: flex-start; padding-top: 8px; }
 .text-link:hover { text-decoration: underline; }
 .service-area-panel { display: flex; justify-content: space-between; align-items: center; gap: 28px; margin-top: 32px; padding: clamp(24px, 4vw, 44px); background: var(--color-graphite); color: var(--color-stainless); border-radius: var(--radius-md); }
 .service-area-panel > div { max-width: 760px; }
@@ -1269,9 +1270,9 @@ select.form-control {
   .section-heading-row { display: block; }
   .section-heading-row > p { margin-top: 10px; }
   .equipment-guide-grid { grid-template-columns: 1fr; }
-  .equipment-guide-card { grid-template-columns: 112px minmax(0, 1fr); }
+  .equipment-guide-card { grid-template-columns: 112px minmax(0, 1fr); height: auto; }
   .equipment-guide-card img { min-height: 100%; height: 100%; }
-  .equipment-guide-card > div { padding: 16px; }
+  .equipment-guide-card > div { padding: 16px; height: 100%; }
   .service-area-panel { align-items: flex-start; flex-direction: column; }
   .service-area-panel .btn { width: 100%; text-align: center; }
 }
@@ -1283,11 +1284,31 @@ select.form-control {
   .mobile-drawer { padding: 76px 24px 28px; }
   .equipment-guide-card { grid-template-columns: 1fr; }
   .equipment-guide-card img { height: 180px; min-height: 0; }
+  .equipment-guide-card > div { height: auto; }
 }
 
 
-/* Equipment Categories: keep content left-aligned on tablet widths, including 1024px */
+/* Equipment Categories & Workflow Guide: responsive tablet styles, including 1024px */
 @media (min-width: 768px) and (max-width: 1024px) {
+  .equipment-guide-grid {
+    grid-template-columns: 1fr;
+  }
+  .equipment-guide-card {
+    grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);
+    height: auto;
+  }
+  .equipment-guide-card img {
+    min-height: 100%;
+    height: 100%;
+  }
+  .equipment-guide-card > div {
+    padding: clamp(20px, 2.5vw, 28px);
+    height: 100%;
+  }
+  .equipment-guide-card h3 {
+    font-size: clamp(1.2rem, 2vw, 1.55rem);
+  }
+
   .equipment-categories-section .editorial-split {
     align-items: flex-start;
     text-align: left;
